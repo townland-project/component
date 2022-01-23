@@ -1,3 +1,4 @@
+import "./style/tailwind.scss"
 import { RenderComponent } from "@townland-project/dom"
 import { MainComponent } from "."
 
