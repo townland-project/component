@@ -8,7 +8,7 @@ module.exports = {
         filename: "bundle.js",
     },
     resolve: {
-        extensions: [".ts", ".js", ".html", ".htmlx", ".css", ".sass", ".scss"]
+        extensions: [".ts", ".js", ".html", ".css", ".sass", ".scss"]
     },
     module: {
         rules: [
@@ -35,19 +35,6 @@ module.exports = {
                     "sass-loader",
                     "postcss-loader",
                 ],
-            },
-            {
-                test: /\.s[ac]ssx$/i,
-                use: [
-                    {
-                        loader: 'raw-loader',
-                        options: {
-                            esModule: false,
-                        },
-                    },
-                    "sass-loader",
-                    "postcss-loader"
-                ]
             }
         ]
     },

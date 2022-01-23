@@ -44,8 +44,8 @@ export function GenerateComponent(prefix: string, name: string): void {
     
 @Component({
     id: '${prefix}-${CreateTagName(name)}',
-    template: require('./component.htmlx'),
-    style: require('./component.scssx')
+    template: require('./component.html'),
+    style: require('./component.scss')
 })
 export class ${CreateComponentName(name)}Component {}
     `    
@@ -56,8 +56,8 @@ export class ${CreateComponentName(name)}Component {}
     }
 
     fs.mkdirSync(component_path)
-    fs.writeFileSync(path.join(component_path, 'component.htmlx'), html)
-    fs.writeFileSync(path.join(component_path, 'component.scssx'), style)
+    fs.writeFileSync(path.join(component_path, 'component.html'), html)
+    fs.writeFileSync(path.join(component_path, 'component.scss'), style)
     fs.writeFileSync(path.join(component_path, 'index.ts'), ts)
 
     console.log(`Component with name '${name}' created successfully.`);
